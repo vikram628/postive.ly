@@ -1,0 +1,1 @@
+{"num_pos": 3, "num_neg": 0, "avg_score": 0.5004836320877075, "top_5": ["My Sample Message", "My Sample Message", "My Sample Message"]}

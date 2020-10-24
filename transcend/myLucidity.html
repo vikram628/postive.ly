@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>My Account</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Over+the+Rainbow|Lobster|Bangers|Julee' rel='stylesheet' type='text/css'/>
+    <link rel='stylesheet' href='css/960.css' type='text/css' media='all' charset='utf-8'/>
+    <link rel='stylesheet' href='css/diary.css' type='text/css' media='all' charset='utf-8'/>
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+
+
+<!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logo1.jpg" alt="Homepage">
+            </a>
+        </div> <!-- end header-logo -->
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+
+                <ul class="header-nav__list">
+                    <li class="current"><a href="index.html" title="home">Home</a></li>
+                    <li><a class="smoothscroll" title="about" href="#about">My Account</a></li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav> <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+<body id="top">
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">My Mood Log</h3>
+                <h1 class="display-1">Here's an overview of your recent mood balance and long-term emotional trends.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="graph/24hours/large/test_user" class="thumb-link" title="My Mood Today" data-size="2000x1000">
+                                <img src="graph/24hours/small/test_user"
+                                     srcset="graph/24hours/small/test_user 1x, graph/24hours/small/test_user 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                My Mood Today
+                            </h3>
+
+                        </div>
+
+                        <div class="item-folio__caption">
+                            <p>How your mood has fluctuated over the past 24 hours, on a scale of 0 (negative) to 1 (positive).</p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="graph/ratio/large/test_user" class="thumb-link" title="Polarity Chart" data-size="2000x1000">
+                                <img src="graph/ratio/small/test_user"
+                                     srcset="graph/ratio/small/test_user 1x, graph/ratio/small/test_user 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Polarity Chart
+                            </h3>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>The pecentage of thoughts you've had that were rated positive or negative in the past 24 hours.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="graph/30days/large/test_user" class="thumb-link" title="past30days" data-size="2000x1000">
+                                <img src="graph/30days/small/test_user"
+                                     srcset="graph/30days/small/test_user 1x, graph/30days/small/test_user 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Mood Trends
+                            </h3>
+
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p>The distribution of your overall positive or negative days in the past month.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+
+            </div> <!-- end masonry -->
+        </div> <!-- end masonry-wrap -->
+
+
+    <!-- stats
+    ================================================== -->
+    <section id="stats" class="s-stats">
+
+	<div class="row stats block-1-3 block-m-1-2 block-mob-full"
+		data-aos="fade-up">
+
+            <div class="col-block stats__col ">
+		    <div class="stats__count" id="num_pos"></div>
+                <h5>Number of Positive Thoughts</h5>
+            </div>
+            <div class="col-block stats__col" >
+                <div class="stats__count" id="num_neg">0</div>
+                <h5>Number of Negative Thoughts</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count" id="avg_score">0</div>
+                <h5>Today's Mood Score</h5>
+            </div>
+
+        </div> <!-- end stats -->
+
+    </section> <!-- end s-stats -->
+
+
+<!-- Gratitude Journal
+    ================================================== -->
+    <section id='Gratitude Journal' class="s-about">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead"> My Gratitude Journal</h3>
+                <h1 class="display-1"></h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+              	 Write down five things you've experienced in the past week for which you're grateful.
+                 To help you out, here are your five most positive thoughts from the last day.
+                </p>
+		<p class="lead" id="top5">
+		</p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div id='content' class='container_12'>
+        <div class='grid_12' id='add-text'>
+          <div class='field'><textarea></textarea></div>
+          <div class='actions'>
+            <button onclick='okEdit()'>Ok</button>
+            <button onclick='cancelEdit()'>Cancel</button>
+          </div>
+        </div>
+        <div class='clear'></div>
+
+
+
+        </div>
+        <divspecial class='grid_9' id='posts'>
+          XXX
+        </divspecial>
+        <divspecial class='clear'></divspecial>
+      </div>
+    </div>
+
+        </div> <!-- end about-stats -->
+
+    </section> <!-- end s-about -->
+
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="row">
+
+            <div class="col-full contact-main" data-aos="fade-up">
+                <p>
+                <a href="mailto:#0" class="contact-email">positivelyco@gmail.com</a>
+                <span class="contact-number">+1 (614) 256 0234</span>
+                </p>
+            </div> <!-- end contact-main -->
+
+        </div> <!-- end row -->
+
+        <div class="row">
+
+            <div class="col-five tab-full contact-secondary" data-aos="fade-up">
+                <h3 class="subhead subhead--light">Where To Find Us</h3>
+
+                <p class="contact-address">
+                    1 Chapel Dr<br>
+                    Durham, NC<br>
+                    27708 US
+                </p>
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end row -->
+
+        <div class="row">
+            <div class="col-full cl-copyright">
+                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+            </div>
+        </div>
+
+        <div class="cl-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>
+    <script src='js/diary.js'></script>
+
+</body>
+
+</html>
